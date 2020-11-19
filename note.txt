@@ -1,0 +1,5 @@
+  * STM32F103C8Tx   (stm32 black pill)
+  * PA8:  INPUT_PULLUP       BUTTON
+	* PB12: OUTPUT Push pull   LED
+	* external clock           8Mhz
+	* -------------------------DANG VAN HAO  K57-UTC-----------------------------

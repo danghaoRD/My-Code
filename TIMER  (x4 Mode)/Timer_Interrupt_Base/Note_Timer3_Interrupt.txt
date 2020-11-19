@@ -1,0 +1,29 @@
+Yêu cầu: dùng ngắt ở timer 3 điều khiển led PB12 thay đổi trạng thái 1s/lần. 
+
+PSC: chia tần số
+ARR: bộ đếm 
+cả 2 giá trị trên đều nhận giá trị theo kiểu PSC=(số nhập +1)
+
+chọn Internal Clock
+timer_3 dùng clock Ở APB1.  bài này set 8Mhz
+==> PSC = 7999+1=8000
+    ARR = 999 +1=1000
+---> tần số 8.000.000/((7999+1)*(999+1)) = 1 --> tần số 1Hz
+
+Code: 
+     HAL_TIM_Base_Start_IT(&htim3);    bật timer bắt đầu hoạt động
+  
+
+     void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)  // hàm ngat timer
+{   
+	if(htim->Instance==TIM3)                                // kiem tra xem ngat timer nao
+	{ 
+		HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);            // dao trang thai led neu la timer 3
+	}
+}
+
+
+
+
+TIM1 clock ở APB2. chuyên để xuất xung ngoại.
+TIM2,3,4 lấy clock ở APB1 thường dùng với mục đích định thời bên trong chương trình

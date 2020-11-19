@@ -1,0 +1,16 @@
+yêu cầu: dùng chức năng Input capture tại TIM3-CN1 đếm thời gian ấn nút .
+
+thực hiện:  lấy tần số 8Mhz cho APB1.  PCS =7999+1---> tần số sau bộ chia của TIM3 là 1000Hz.
+                                       ARR =0xffff----> có thể đếm đc tối da thời gian 65535s
+                                       bộ lọc 15
+                                       dùng điện trở kéo lên cho chân đầu vào . --> PA6--->BUTTON--->GND
+          CODE:
+                + bật ngắt :	HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_1);
+		+ viết hàm ngắt: void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)   // bật ngắt khi có đầu vào từ nút
+                              { 
+ 				if(htim->Instance==TIM3) 				    // kiểm tra timer nào. nếu là tim3 thì....
+					{ 
+					Time_Capture =	__HAL_TIM_GET_COUNTER(&htim3);     // lấy giá trị bộ đếm timer 3
+					__HAL_TIM_SET_COUNTER(&htim3, 0);                  // đặt lại về 0 để đếm tiếp cho xung sau
+					}
+				}

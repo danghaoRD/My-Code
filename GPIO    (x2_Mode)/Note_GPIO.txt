@@ -1,0 +1,3 @@
+2 chức năng cơ bản của I/0
++ INPUT
++ OUTPUT

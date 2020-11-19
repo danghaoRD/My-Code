@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"external_input_couter\startup_stm32f103xb.o"
+"external_input_couter\main.o"
+"external_input_couter\stm32f1xx_it.o"
+"external_input_couter\stm32f1xx_hal_msp.o"
+"external_input_couter\stm32f1xx_hal_gpio_ex.o"
+"external_input_couter\stm32f1xx_hal_tim.o"
+"external_input_couter\stm32f1xx_hal_tim_ex.o"
+"external_input_couter\stm32f1xx_hal.o"
+"external_input_couter\stm32f1xx_hal_rcc.o"
+"external_input_couter\stm32f1xx_hal_rcc_ex.o"
+"external_input_couter\stm32f1xx_hal_gpio.o"
+"external_input_couter\stm32f1xx_hal_dma.o"
+"external_input_couter\stm32f1xx_hal_cortex.o"
+"external_input_couter\stm32f1xx_hal_pwr.o"
+"external_input_couter\stm32f1xx_hal_flash.o"
+"external_input_couter\stm32f1xx_hal_flash_ex.o"
+"external_input_couter\stm32f1xx_hal_exti.o"
+"external_input_couter\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "External_Input_Couter\External_Input_Couter.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "External_Input_Couter.map" -o External_Input_Couter\External_Input_Couter.axf

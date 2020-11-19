@@ -1,0 +1,10 @@
+Yêu cầu: thực hiện đếm xung xuống ở một cổng đầu vào. ghi vào thanh counter. đếm tới 9 thì quay về 0;
+         khi count =3 thì bật led PB12. còn lại thì tắt
+thực hiện: dùng Timer 3.  với đầu vào là chân PA6 set pullup
+           kết nối PA6--button--GND
+           bắt sườn xuống.
+           chọn TIM3 Mode: external clock Mode 1
+                trigger Souece TIFP1 ( PA6)
+lấy giá trị thanh đếm với hàm     __HAL_TIM_GET_COUNTER(&htim3);       
+chạy debug với phần mềm STMstudio. để hiện thị các biến trong chuwong trình lên và kiểm tra.             
+          

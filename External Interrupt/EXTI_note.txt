@@ -1,0 +1,10 @@
+Yêu cầu: thực hiện set ngắt ở PA6 sường xuống thì đào led PB12
+thực hiện: ở đây đã set 2 chân ngắt PA0 PA6. pull_up. khi có xung xuong ở chân PA6 thì đảo led PB12
+            ( PA0 tạm thời không dùng)
+        void HAL_GPIO_EXTI_Callback()
+		{ 
+                  If(GPIO_Pin == GPIO_PIN_6)
+                     {
+			/*yêu cầu*/
+                      }
+		}

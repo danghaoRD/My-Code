@@ -1,0 +1,5 @@
+có 4 chức năng với 4 bài riêng biệt.
++ Timer_Interrupt 
++ External_Input_Counter    
++ Input_Capture             
++ PWM 

@@ -1,0 +1,7 @@
+yêu cầu: thực hiện khi ấn phím thì đèn led đảo trạng thái
+            * dí phím vẫn tính 1 lần ấn
+Kết nối: PA8-->BUTTON-->GND
+         PB12-->LED+RES-->GND
+chú ý:  *Ở đây phần nút ấn không cần điện trở kéo lên vì ta đã lập trình bên trong chip ( INPUT_PULLUP) có thể PULL_DOW hoặc không kéo tùy theo yêu cầu
+        *delay 50ms để tạo trễ chống rung phím. các bài toán khác với yêu cầu cao thì sẽ không được dùng cách này vì nó tạo trễ cho chương trình.
+      

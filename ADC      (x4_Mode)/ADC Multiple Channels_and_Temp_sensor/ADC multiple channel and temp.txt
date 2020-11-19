@@ -1,0 +1,3 @@
+yêu cầu:  đo ADC 1 cổng ADC1_IN0 và ADC1_IN1 cùng với cảm biến nhiệt độ bên trong vxl
+thực hiện: đã đo được ADC ở 2 chân IN0 và IN1 nhưng phần nhiệt độ làm theo công thức của nhà sản xuất nhưng giá trị trả về đang sai, chưa sửa được
+           sẽ uplate lại ngya sau  khi tìm cách fix được

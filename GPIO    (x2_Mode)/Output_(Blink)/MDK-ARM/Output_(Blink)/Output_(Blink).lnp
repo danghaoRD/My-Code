@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"output_(blink)\startup_stm32f103xb.o"
+"output_(blink)\main.o"
+"output_(blink)\stm32f1xx_it.o"
+"output_(blink)\stm32f1xx_hal_msp.o"
+"output_(blink)\stm32f1xx_hal_gpio_ex.o"
+"output_(blink)\stm32f1xx_hal_tim.o"
+"output_(blink)\stm32f1xx_hal_tim_ex.o"
+"output_(blink)\stm32f1xx_hal.o"
+"output_(blink)\stm32f1xx_hal_rcc.o"
+"output_(blink)\stm32f1xx_hal_rcc_ex.o"
+"output_(blink)\stm32f1xx_hal_gpio.o"
+"output_(blink)\stm32f1xx_hal_dma.o"
+"output_(blink)\stm32f1xx_hal_cortex.o"
+"output_(blink)\stm32f1xx_hal_pwr.o"
+"output_(blink)\stm32f1xx_hal_flash.o"
+"output_(blink)\stm32f1xx_hal_flash_ex.o"
+"output_(blink)\stm32f1xx_hal_exti.o"
+"output_(blink)\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "Output_(Blink)\Output_(Blink).sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Output_(Blink).map" -o Output_(Blink)\Output_(Blink).axf

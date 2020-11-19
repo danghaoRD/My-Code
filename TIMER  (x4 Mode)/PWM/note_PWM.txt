@@ -1,0 +1,8 @@
+Yêu cầu: tạo đầu ra PWM ở TIM3_CH1(PA6)  tần số 1Khz. độ phân giải 100. để sáng dần và tắt dần led.
+dùng TIM3_CH1. chết độ tạo PWM. 
+thạch anh ngoại 8Mhz.
+PSC: 79+1
+ARR: 99+1
+
+dầu tiên bật PWM: HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+set độ rộng:      __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, i); // i là độ rông tính theo độ phan giải.  ở bài này 0-->100; 	

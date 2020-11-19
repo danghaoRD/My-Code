@@ -1,0 +1,1 @@
+adc multiple channels_and_temp_sensor\startup_stm32f103xb.o: startup_stm32f103xb.s

@@ -1,0 +1,2 @@
+Yêu cầu: đo ADC ở ADC1_IN0. sử dụng DMA và ngắt ADC.
+thực hiện:  đã làm như yêu cầu.  

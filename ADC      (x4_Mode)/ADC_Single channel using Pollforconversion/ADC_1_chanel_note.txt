@@ -1,0 +1,18 @@
+  yêu cầu: đo điện áp chân A0 và chuyển về giá trị điện áp. sử dụng chế độ chuyển đổi không liên tục.
+  thực hiện: đã thiết lập đo ADC ở chân A0. với các thông số:
+        * Single conversion mode 
+   	* PA0:                       ADC IN0  (12bit) 
+	* Continuous Conversion Mode: Disabled
+	* Sampling time :             41.5 cycles 
+	* external clock              8Mhz
+	* ADC clock                   4Mhz
+   vì là ADC 12 bit và điện áp đo max là 3.3v.
+nên công thức chuyển đổi từ giá trị ADC trả về sang giá trị điện áp thực là: Voltage_value = ADC_value*3.3/4096; 
+
+
+code : 		HAL_ADC_Start(&hadc1);                   // Start ADC1
+		HAL_ADC_PollForConversion(&hadc1, 100);  // time out = 100ms
+		ADC_value = HAL_ADC_GetValue(&hadc1);    // Get value
+		HAL_ADC_Stop(&hadc1);                    // Stop ADC1
+		Voltage_value = ADC_value*3.3/4096;      // conversions from ADC_value(12bit) to Voltage value (0-->3,3v)
+chạy debug bằng keilc hoặc STM_Studio(ưu tiên);           

@@ -1,0 +1,9 @@
+điều khiển led ở chân PB12 nháy với chu kì 1s.
+
+
+*Note
+Ở mục chế độ. có 2 kiểu là "Output Push Pull" và " Output Open Drain
++Push Pull Mode:  logic 0 -->GND       
+                  logic 1 -->VDD
++Open Drain Mode: logic 0 -->GND
+                  logic 1 -->HIGH-Z(trở kháng cao). 
